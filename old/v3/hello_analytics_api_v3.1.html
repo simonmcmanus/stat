@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Hello Google Analytics API</title>
+  <link rel="stylesheet" type="text/css"
+      href="//fonts.googleapis.com/css?family=Cantarell|Inconsolata">
+  <link rel="stylesheet" type="text/css"
+      href="pretty.css">
+</head>
+<body>
+<h1>Hello Google Analytics API</h1>
+<p>This page demonstrates how to query the Google Analytics API version 3 using the
+   <a href="https://code.google.com/p/google-api-javascript-client/">
+      Google API Javascript Client Library</a>.</p>
+
+<p>The demo traverses the
+   <a href="http://code.google.com/apis/analytics/docs/mgmt/v3/mgmtGettingStarted.html">
+      Management API</a> to retrieve the first profile ID for the
+   authorized user. This profile ID is then used with the
+   <a href="http://code.google.com/apis/analytics/docs/gdata/v3/gdataGettingStarted.html">
+      Core Reporting API</a> to retrieve the top 25 organic search terms by visits.</p>
+
+<p>To learn how this works, read the detailed comments in the
+   <a href="hello_analytics_api_v3.js">JavaScript source code</a>.</p>
+
+<p>To run the demo:</p>
+<ol>
+  <li>Click the authorize button to grant access to your Google Analytics data.</li>
+  <li>Click the run demo button to start the demo.</li>
+</ol>
+
+<hr>
+<button id="authorize-button" style="visibility: hidden">Authorize</button>
+<button id="run-demo-button" style="visibility: hidden">Run Demo</button>
+<br>
+<hr>
+<div id="output">Loading, one sec....</div>
+
+<script src="auth_util.js"></script>
+<script src="hello_analytics_api_v3.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+
+
+path:nth-child(1) {
+    stroke: blue;
+}
+
+#key li:nth-child(1) {
+    background: blue;
+}
+#key li:nth-child(2) {
+    background: green;
+}
+path:nth-child(2) {
+    stroke: green;
+}
+
+#key li:nth-child(3) {
+    background: #D91E57;
+}
+path:nth-child(3) {
+    stroke: #D91E57;
+}
+
+#key li:nth-child(4) {
+    background: #BED52E;
+}
+path:nth-child(4) {
+    stroke: #BED52E;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #BED52E;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+</style>
+<body>
+
+<!-- load the d3.js library -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+
+</script>
+
+<ul id="key">
+<li>simonmcmanus</li>
+<li>dotjs</li>
+<li>EnhanceConf</li>
+<li>lnug</li>
+</ul>
+
+</body>
+
+</body>
+</html>
