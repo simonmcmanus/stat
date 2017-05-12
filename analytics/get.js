@@ -35,13 +35,19 @@ var allRealtime = function(ids) {
 
 function pollRealtime(ids) {
 
+
+    document.getElementById('update').onclick = function(e) {
+        e.preventDefault();
+       alert('hi')
+    }
+
     allRealtime(ids);
 
-    setInterval(function() {
+    // setInterval(function() {
 
-        allRealtime(ids);
+    //     allRealtime(ids);
 
-    }, 5000)
+    // }, 5000)
 
 }
 
@@ -56,9 +62,9 @@ function getGraph(ids, callback) {
 
         var apiQuery = gapi.client.analytics.data.ga.get({
             'ids': 'ga:' + id,
-            'start-date': '2014-03-01',
-            'end-date': '2017-04-25',
-            'metrics': 'ga:pageviews',
+            'start-date': '2015-02-01',
+            'end-date': '2017-05-25',
+            'metrics': 'ga:users',
             dimensions: 'ga:date',
             'max-results': 10000
         });
