@@ -58,12 +58,14 @@ function getGraph(ids, callback) {
     async.map(ids, function(id, next) {
 
 
+        var now = new Date();
 
+        var dateString = now.getFullYear() + '-0' + (now.getMonth() + 1) + '-' + now.getDate();
 
         var apiQuery = gapi.client.analytics.data.ga.get({
             'ids': 'ga:' + id,
-            'start-date': '2015-02-01',
-            'end-date': '2017-05-25',
+            'start-date': '2017-04-01',
+            'end-date': dateString,
             'metrics': 'ga:users',
             dimensions: 'ga:date',
             'max-results': 10000
